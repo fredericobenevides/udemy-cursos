@@ -1,0 +1,7 @@
+id,name,salary,manager_name
+1,Ajay,1000,Rohit
+2,Summit,2000,Rohit
+3,Rohit,3000,Rahul
+4,Neha,5000,Rahul
+5,Ajay,10000,Mohit
+1,Suraj,10000,Ajay

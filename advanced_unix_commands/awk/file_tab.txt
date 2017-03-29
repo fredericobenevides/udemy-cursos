@@ -1,0 +1,6 @@
+id      name      salary
+1       Ajay      1000
+2       Summit    2000
+3       Rohit     3000
+4       Neha      5000
+5       Ajay      10000
