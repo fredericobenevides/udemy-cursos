@@ -1,0 +1,8 @@
+id|name|salary
+1|Amit|10000
+2|Ajay|20000
+3|John|30000
+4|Simon|10000
+5|amit|2000
+6|Johny|10000
+7|Rohan|8000
