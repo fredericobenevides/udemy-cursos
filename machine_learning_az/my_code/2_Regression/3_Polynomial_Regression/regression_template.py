@@ -25,7 +25,7 @@ y_train = sc_y.fit_transform(y_train)"""
 # Fitting the Regression Model to the dataset
 # Create your regressor here
 
-# Predicting a new result with Polynomial Regression
+# Predicting a new result
 y_pred = regressor.predict(6.5)
 
 # Visualizing the Regression Results
