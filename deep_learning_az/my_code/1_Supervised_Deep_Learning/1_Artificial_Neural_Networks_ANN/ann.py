@@ -143,12 +143,14 @@ def build_classifier(optimizer):
     classifier.add(Dense(output_dim = 6, init = 'uniform', activation = 'relu', input_dim = 11))
     classifier.add(Dense(output_dim = 6, init = 'uniform', activation = 'relu'))
     classifier.add(Dense(output_dim = 6, init = 'uniform', activation = 'relu'))
+    classifier.add(Dense(output_dim = 6, init = 'uniform', activation = 'relu'))
+    classifier.add(Dense(output_dim = 6, init = 'uniform', activation = 'relu'))
     classifier.add(Dense(output_dim = 1, init = 'uniform', activation = 'sigmoid'))
     classifier.compile(optimizer = optimizer, loss = 'binary_crossentropy', metrics = ['accuracy'])
     return classifier
 classifier = KerasClassifier(build_fn = build_classifier)
-parameters = {'batch_size': [10, 25, 32, 64],
-              'nb_epoch': [100, 500, 1000],
+parameters = {'batch_size': [10, 25, 32, 64, 128],
+              'nb_epoch': [1, 50, 100, 500, 1000, 1500, 2000],
               'optimizer': ['adam', 'rmsprop']}
 grid_search = GridSearchCV(estimator = classifier,
                            param_grid = parameters,
