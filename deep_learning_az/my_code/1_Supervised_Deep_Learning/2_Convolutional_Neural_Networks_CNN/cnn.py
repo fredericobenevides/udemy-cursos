@@ -1,0 +1,79 @@
+# Convolutional Neural Netwrok
+
+# Installing Theano
+# pip install theano
+
+# Installing Tensorflow
+# pip install tensorflow
+
+# Installing Keras
+# pip install keras
+
+# Part 1 - Building the CNN
+from keras.models import Sequential
+from keras.layers import Convolution2D
+from keras.layers import MaxPooling2D
+from keras.layers import Flatten
+from keras.layers import Dense
+
+# Initializing the CNN
+classifier = Sequential()
+
+# Step 1 - Convolution
+# Começa com 32, depois 64...
+classifier.add(Convolution2D(32, 3, 3, input_shape = (64, 64, 3), activation = 'relu'))
+
+# Step 2 - Pooling
+classifier.add(MaxPooling2D(pool_size = (2, 2)))
+
+# Step 3 - Flattening
+classifier.add(Flatten())
+
+# Step 4 - Full connection
+classifier.add(Dense(output_dim = 128, activation = 'relu'))
+classifier.add(Dense(output_dim = 1, activation = 'sigmoid')) # output layer
+
+# Compiling the CNN
+classifier.compile(optimizer = 'adam', loss = 'binary_crossentropy', metrics = ['accuracy'])
+
+# Part 2 - Fitting the CNN to the images
+from keras.preprocessing.image import ImageDataGenerator
+
+train_datagen = ImageDataGenerator(
+        rescale=1./255,
+        shear_range=0.2,
+        zoom_range=0.2,
+        horizontal_flip=True)
+
+test_datagen = ImageDataGenerator(rescale=1./255)
+
+training_set = train_datagen.flow_from_directory('dataset/training_set',
+                                                 target_size=(64, 64),
+                                                 batch_size=32,
+                                                 class_mode='binary')
+
+test_set = test_datagen.flow_from_directory('dataset/test_set',
+                                            target_size=(64, 64),
+                                            batch_size=32,
+                                            class_mode='binary')
+
+classifier.fit_generator(training_set,
+                         steps_per_epoch=8000, # quantidade de imagens do training_set
+                         epochs=25,
+                         validation_data=test_set,
+                         validation_steps=2000) # quantidade de imagens do test_set
+
+from tensorflow.python.client import device_lib
+print(device_lib.list_local_devices())
+
+import tensorflow as tf
+sess = tf.Session(config=tf.ConfigProto(log_device_placement=True))
+
+import tensorflow as tf
+with tf.device('/gpu:0'):
+    a = tf.constant([1.0, 2.0, 3.0, 4.0, 5.0, 6.0], shape=[2, 3], name='a')
+    b = tf.constant([1.0, 2.0, 3.0, 4.0, 5.0, 6.0], shape=[3, 2], name='b')
+    c = tf.matmul(a, b)
+
+with tf.Session() as sess:
+    print (sess.run(c))
