@@ -11,5 +11,10 @@
   </div>
 </template>
 
-<script
-></script>
+<script></script>
+
+<style scoped>
+div {
+  border: 1px solid blue;
+}
+</style>
