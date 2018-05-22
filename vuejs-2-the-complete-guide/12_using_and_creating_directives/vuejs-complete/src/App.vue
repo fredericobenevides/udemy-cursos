@@ -4,8 +4,8 @@
       <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
         <h1>Directives</h1>
         <p>Built-in Directives</p>
-        <p v-text"'Some Text'"></p>
-        <p v-html"'<strong>Some strong text</strong>'"></p>
+        <p v-text="'Some Text'"></p>
+        <p v-html="'<strong>Some strong text</strong>'"></p>
       </div>
     </div>
     <div class="row">
@@ -37,14 +37,16 @@ export default {
           let currentColor = mainColor;
           setTimeout(() => {
             setInterval(() => {
-              currentColor == secondColor ? currentColor = mainColor : currentColor = secondColor;
+              currentColor == secondColor
+                ? (currentColor = mainColor)
+                : (currentColor = secondColor);
 
               if (binding.arg == 'background') {
                 el.style.backgroundColor = currentColor;
               } else {
                 el.style.color = currentColor;
               }
-            },binding.value.delay);
+            }, binding.value.delay);
           }, delay);
         } else {
           setTimeout(() => {
@@ -53,15 +55,13 @@ export default {
             } else {
               el.style.color = binding.value.mainColor;
             }
-
           }, delay);
         }
       }
     }
   }
-}
+};
 </script>
 
 <style>
-
 </style>
