@@ -8,7 +8,18 @@
     <!--   class="btn btn-primary">Edit User</router-link> -->
     <router-link
       tag="button"
-      :to="{ name: 'userEdit', params: { id: $route.params.id }, query: { locale: 'en', q: 100 } }"
+      :to="{ name: 'userEdit', params: { id: $route.params.id }, query: { locale: 'en', q: 100 }, hash: '#data' }"
       class="btn btn-primary">Edit User</router-link>
   </div>
 </template>
+
+<script>
+export default {
+  beforeRouteEnter(to, from, next)  {
+  if (true) {
+      next();
+  }
+  next(false);
+  }
+}
+</script>
