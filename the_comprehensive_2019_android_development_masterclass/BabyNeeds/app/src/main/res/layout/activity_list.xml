@@ -7,7 +7,7 @@
     android:background="@color/colorAccent"
     tools:context=".ListActivity">
 
-    <androidx.recyclerview.widget.RecyclerView
+kjjiii    i<androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerview"
         android:layout_width="399dp"
         android:layout_height="670dp"
