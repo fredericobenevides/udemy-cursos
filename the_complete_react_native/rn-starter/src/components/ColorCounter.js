@@ -2,6 +2,8 @@ import React from 'react';
 import { View, Text, StyleSheet, Button } from 'react-native';
 
 const ColorCounter = ({ color, onIncrease, onDecrease }) => {
+  console.log(color);
+  console.log(onIncrease);
   return (
     <View>
       <Text>More {color}</Text>
