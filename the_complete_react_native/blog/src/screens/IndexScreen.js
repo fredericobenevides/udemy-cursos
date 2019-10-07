@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import {
   View,
   Text,
@@ -11,11 +11,28 @@ import { Context as BlogContext } from '../context/BlogContext';
 import { Feather } from '@expo/vector-icons';
 
 const IndexScreen = ({ navigation }) => {
-  const { state, addBlogPost, deleteBlogPost } = useContext(BlogContext);
+  const { state, addBlogPost, deleteBlogPost, getBlogPosts } = useContext(
+    BlogContext
+  );
+
+  useEffect(() => {
+    // getBlogPosts();
+
+    // veio de outra janela ou teve focus, carrega todos os posts
+    const listener = navigation.addListener('didFocus', () => {
+      getBlogPosts();
+    });
+
+    // quando sair da tela, o use effect irá chamar esse callback e removerá
+    // o listener
+    return () => {
+      listener.remove();
+    };
+  }, []);
 
   return (
     <View>
-      <Text>Index Screen</Text>
+      {/* <Text>Index Screen</Text> */}
       {/* <Button title="Add Post" onPress={addBlogPost}></Button> */}
       <FlatList
         data={state}
