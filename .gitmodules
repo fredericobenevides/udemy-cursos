@@ -1,0 +1,3 @@
+[submodule "spring_boot_microservices_and_spring_cloud/PhotoAppConfiguration"]
+	path = spring_boot_microservices_and_spring_cloud/PhotoAppConfiguration
+	url = https://github.com/fredericobenevides/PhotoAppConfiguration.git
