@@ -1,0 +1,11 @@
+show dbs
+
+use shop
+
+db.products.insertOne({name: "A book", price: 12.99})
+
+db.products.find().pretty()
+
+db.products.insertOne({name: "A T-shirt", price: 29.99, description: "This is a high quality T-Shirt"})
+
+db.products.insertOne({name: "A Computer", price: 1229.99, description: "A high quality computer.", details: { cpu: "Intel i7 8770", memory: 32}})

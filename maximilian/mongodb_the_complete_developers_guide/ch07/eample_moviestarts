@@ -1,0 +1,3 @@
+db.moviestarts.find({genre: ["action", "thriller"]}).pretty()
+
+db.moviestarts.find({genre: {$all: ["action", "thriller"]}}).pretty()
