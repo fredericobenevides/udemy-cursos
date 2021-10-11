@@ -1,0 +1,34 @@
+2021-05-02 16:02:48 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - Starting TwitterToKafkaServiceApplication on myhome with PID 1312286 (/home/frederico/code/udemy/event-driven_microservices_spring_boot_kafka_and_elastic/microservices-demo/twitter-to-kafka-service/target/classes started by frederico in /home/frederico/code/udemy/event-driven_microservices_spring_boot_kafka_and_elastic/microservices-demo)
+2021-05-02 16:02:48 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - No active profile set, falling back to default profiles: default
+2021-05-02 16:02:48 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - Started TwitterToKafkaServiceApplication in 0.46 seconds (JVM running for 1.103)
+2021-05-02 16:02:48 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - App starts...
+2021-05-02 16:02:48 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - [Java, Microservices, Kafka, Elasticsearch]
+2021-05-02 16:02:48 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - Hello microservices!
+2021-05-02 16:02:48 [main] INFO  c.m.d.t.t.k.s.r.i.TwitterKafkaStreamRunner - Started filtering twitter stream for keywords [Java, Microservices, Kafka, Elasticsearch]
+2021-05-02 16:02:48 [Twitter Stream consumer /  [1][initializing]] INFO  twitter4j.TwitterStreamImpl - Establishing connection.
+2021-05-02 16:02:53 [Twitter Stream consumer /  [1][Establishing connection]] INFO  twitter4j.TwitterStreamImpl - Connection established.
+2021-05-02 16:02:53 [Twitter Stream consumer /  [1][Establishing connection]] INFO  twitter4j.TwitterStreamImpl - Receiving status stream.
+2021-05-02 16:02:53 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @AlexRosu1989: #bitcoin #codinglife #fullstack #crypto #javascript30 #InternetOfThings #frontend #programming #html #pythonprogramming #…
+2021-05-02 16:03:00 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @Br3Sc: Python lesson🐍
+
+How to use inheritance in Python, made easy, check It out👇🏼
+
+#coding #Ruby #nodejs #vuejs #reactjs #100DaysOfCod…
+2021-05-02 16:03:07 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text ❗ランキング:23位❗ (ナイト＆週末セール)
+
+「 (オフィス付)  LAVIE Smart HM Celeron 4GB SSD256GB パールブラック PC-SN18CSADG-D」
+メーカ:NEC
+
+価格:¥79,800(04:03)
+
+https://t.co/cfdETYaAfJ
+2021-05-02 16:03:07 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text ❗ランキング：4位❗ (無停電電源装置（UPS）)
+
+「APC ES 425 BE425M-JP E BE425M-JPE」
+メーカ:SchneiderElectricJapan
+
+価格:¥5,580(04:03)
+
+https://t.co/yjMsg7c8zY
+2021-05-02 16:03:19 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @phyta_nuna: Ready onfire #EXPOBEKASI #BekasiCrot #bekasibo #bekasiangel #expobekasi #angelbekasi #bumilbo #bumilhot #bumilavail #bumilr…
+2021-05-02 16:03:20 [SpringContextShutdownHook] INFO  c.m.d.t.t.k.s.r.i.TwitterKafkaStreamRunner - Closing twitter stream!
